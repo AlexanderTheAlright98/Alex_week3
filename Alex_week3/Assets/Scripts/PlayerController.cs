@@ -4,7 +4,6 @@ public class PlayerController : MonoBehaviour
 {
 
     public float movementSpeed = 10;
-    public float turnSpeed = 5;
     public float xRange = 23.7f;
     public float zRange = 16.6f;
     public GameObject projectilePrefab;
@@ -18,8 +17,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
         //transform.Translate(movementSpeed * horizontal * Time.deltaTime * Vector3.right);
         //transform.Translate(movementSpeed * vertical * Time.deltaTime * Vector3.forward);
@@ -47,9 +46,20 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, zRange);
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Animals")
+        {
+            Destroy(gameObject);
+            Time.timeScale = 0;
+            Debug.Log("YOU'RE CLUCKED MATE!");
+        }
+    }
+
 }
