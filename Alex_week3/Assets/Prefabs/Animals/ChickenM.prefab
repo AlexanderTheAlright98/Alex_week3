@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 6
-  xRange: 23.7
+  xRange: 32
   zRange: 25
   enemyhitPoints: 2
 --- !u!65 &5801331236815508297

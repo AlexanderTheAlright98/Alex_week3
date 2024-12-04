@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float xRange = 23.7f;
     public float zRange = 16.6f;
     public GameObject projectilePrefab;
+    public int score;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,9 +21,6 @@ public class PlayerController : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-
-        //transform.Translate(movementSpeed * horizontal * Time.deltaTime * Vector3.right);
-        //transform.Translate(movementSpeed * vertical * Time.deltaTime * Vector3.forward);
 
         Vector3 moveDir = new Vector3(horizontal, 0, vertical).normalized;
         transform.Translate(moveDir * movementSpeed * Time.deltaTime);
@@ -51,15 +50,4 @@ public class PlayerController : MonoBehaviour
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Animals")
-        {
-            Destroy(gameObject);
-            Time.timeScale = 0;
-            Debug.Log("YOU'RE CLUCKED MATE!");
-        }
-    }
-
 }
