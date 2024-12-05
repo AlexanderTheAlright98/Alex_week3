@@ -262,7 +262,7 @@ Transform:
   m_GameObject: {fileID: 1994886036536844082}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -7.5872416, y: 0, z: 19.850885}
+  m_LocalPosition: {x: -2.8117576, y: 0, z: -23.26646}
   m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -334,7 +334,8 @@ MonoBehaviour:
   movementSpeed: 7
   xRange: 32
   zRange: 25
-  enemyhitPoints: 1
+  gameOverText: {fileID: 0}
+  enemyHitPoints: 1
 --- !u!1 &3811617944986077037
 GameObject:
   m_ObjectHideFlags: 0

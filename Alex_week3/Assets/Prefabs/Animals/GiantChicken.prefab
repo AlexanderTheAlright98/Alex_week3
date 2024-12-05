@@ -303,7 +303,7 @@ Transform:
   m_GameObject: {fileID: 1155593522265726495}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 12.3, y: 0, z: 18.43}
+  m_LocalPosition: {x: 12.71, y: 0, z: -15.094942}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -353,8 +353,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 8
   xRange: 32
-  zRange: 16.6
-  enemyhitPoints: 4
+  zRange: 25
+  gameOverText: {fileID: 0}
+  enemyHitPoints: 4
 --- !u!65 &6948327142081442647
 BoxCollider:
   m_ObjectHideFlags: 0
