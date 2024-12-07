@@ -351,10 +351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66912a41a17597428f1ff20fd71d45f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 8
+  movementSpeed: 3
   xRange: 32
   zRange: 25
-  gameOverText: {fileID: 0}
   enemyHitPoints: 4
 --- !u!65 &6948327142081442647
 BoxCollider:

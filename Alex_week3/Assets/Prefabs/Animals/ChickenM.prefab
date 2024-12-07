@@ -253,16 +253,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4093970857276559162
-Transform:
+--- !u!224 &4093970857276559162
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027844827807229582}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -6.6165457, y: 0, z: -20.585825}
+  m_LocalPosition: {x: 0, y: 0, z: -20.585825}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -276,6 +275,11 @@ Transform:
   - {fileID: 7119067040496941523}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -6.6165457, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &8254809875512984913
 Animator:
   serializedVersion: 7
@@ -310,10 +314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66912a41a17597428f1ff20fd71d45f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 6
+  movementSpeed: 5
   xRange: 32
   zRange: 25
-  gameOverText: {fileID: 0}
   enemyHitPoints: 2
 --- !u!65 &5801331236815508297
 BoxCollider:

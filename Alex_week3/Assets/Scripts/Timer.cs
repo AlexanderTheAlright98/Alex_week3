@@ -34,16 +34,33 @@ public class Timer : MonoBehaviour
             timerTXT.text = "TIME: " + currentTime.ToString("f2");
         }
 
-        if (currentTime <= 0)
-        {
+            if (currentTime <= 0)
+            {
             Time.timeScale = 0;
             nextLevelTXT.text = "YOU SURVIVED! PRESS X TO KEEP GOING!";
+
+            if (SceneManager.GetActiveScene().name == "Level 5")
+            {
+                nextLevelTXT.text = "YOU SURVIVED THE NIGHT!";
+            }
 
             if (Input.GetKeyDown(KeyCode.X))
             {
                 if (SceneManager.GetActiveScene().name == "Level 1")
                 {
                     SceneManager.LoadScene("Level 2");
+                }
+                if (SceneManager.GetActiveScene().name == "Level 2")
+                {
+                    SceneManager.LoadScene("Level 3");
+                }
+                if (SceneManager.GetActiveScene().name == "Level 3")
+                {
+                    SceneManager.LoadScene("Level 4");
+                }
+                if (SceneManager.GetActiveScene().name == "Level 4")
+                {
+                    SceneManager.LoadScene("Level 5");
                 }
             }
         }

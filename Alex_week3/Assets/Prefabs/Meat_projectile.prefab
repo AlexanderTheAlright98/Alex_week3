@@ -150,5 +150,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 30
-  xRange: 28
-  zRange: 16.6
+  xRange: 32
+  zRange: 20

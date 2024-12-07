@@ -27,6 +27,9 @@ public class AnimalMovement : MonoBehaviour
         if (enemyHitPoints <= 0)
         {
             Destroy(gameObject);
+            ScoreandGameOver.score++;
+            //in the ScoreandGameOver script, I set score as a public static variable (int), which combined with the line of code above, allows me to manipulate the score in the animal Script, without it BREAKING on me
+            //due to the chickens being prefabs.
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -34,9 +37,6 @@ public class AnimalMovement : MonoBehaviour
         if (other.tag == "Bullets")
         {
             enemyHitPoints--;
-            ScoreandGameOver.score++;
-            //in the ScoreandGameOver script, I set score as a public static variable (int), which combined with the line of code above, allows me to manipulate the score in the animal Script, without it BREAKING on me
-            //due to the chickens being prefabs.
         }
     }
 }

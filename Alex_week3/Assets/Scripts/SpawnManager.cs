@@ -25,7 +25,7 @@ public class SpawnManager : MonoBehaviour
     {
         int randomIndex = Random.Range(0, chickens.Length);
 
-        Vector3 randomSpawn = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, Random.Range(-spawnRangeZ, spawnRangeZ));
+        Vector3 randomSpawn = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, Random.Range(0, spawnRangeZ));
         Instantiate(chickens[randomIndex], randomSpawn, Quaternion.Euler(0, Random.Range(0, 360), 0));
     }
 }

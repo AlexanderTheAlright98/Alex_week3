@@ -334,7 +334,6 @@ MonoBehaviour:
   movementSpeed: 7
   xRange: 32
   zRange: 25
-  gameOverText: {fileID: 0}
   enemyHitPoints: 1
 --- !u!1 &3811617944986077037
 GameObject:
